@@ -1,12 +1,11 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-//import session from "Config/session";
 
 export default class ReportsController {
-  public async index({view}: HttpContextContract) {
+  public async index(ctx: HttpContextContract) {
     const data = {
-      title: 'Report',
-      message: 'メッセージを送信',
+      title: '届け出・証明書申請システム',
+      message: 'ログインしてください'
     }
-    return view.render('reports/index', data)
+    return ctx.view.render('reports/index', data)
   }
 }
